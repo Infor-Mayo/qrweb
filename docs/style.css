@@ -75,3 +75,7 @@ button.secondary, a.secondary {
 button.secondary:hover, a.secondary:hover {
   box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
 }
+img {
+  width: 100px;
+  height: 100px;
+}
