@@ -1,91 +1,45 @@
-/* Font family */
 body {
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #23a6d5, #23d5ab, #f5d23d);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #fff;
 }
 
-/* Background gradient */
-body {
-  background: linear-gradient(to bottom right, #007bff, #ee22aa);
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Main heading */
 h1 {
   font-size: 3rem;
   text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px 1px #000000;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
-/* Article container */
-.article {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-/* Article image */
-.article img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 2rem auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-/* Article text */
-.article p {
+p {
   font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  color: #333333;
-}
-
-/* Links */
-a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #ee22aa;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #ee22aa;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  margin: 1rem 0;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background-color: #007bff;
+  line-height: 1.6;
+  margin: 0 2rem;
 }
 
 a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2ecc71;
-  color: white;
-  text-align: center;
+  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  margin: 20px auto;
+  background-color: #23d5ab;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 a:hover {
-  background-color: #27ae60;
+  background-color: #f5d23d;
 }
-
