@@ -1,45 +1,45 @@
 body {
+  background: linear-gradient(to bottom right, #00537e, #3aa17e);
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(90deg, #23a6d5, #23d5ab, #f5d23d);
-  background-size: 600% 600%;
-  animation: gradientBG 20s ease infinite;
-  color: #fff;
+  text-align: center; /* Centro el texto de la página */
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 80px; /* Agrego un poco de margen en la parte inferior */
 }
 
 h1 {
   font-size: 3rem;
-  text-align: center;
-  margin: 3rem 0;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 50px;
 }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin: 0 2rem;
-}
-
-a {
+  font-size: 1.5rem;
   color: #fff;
-  text-decoration: none;
-  background-color: #23d5ab;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  line-height: 2rem;
+  margin-top: 30px;
 }
 
-a:hover {
-  background-color: #f5d23d;
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #31a1a1;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background: #008dbd;
+  cursor: pointer;
 }
