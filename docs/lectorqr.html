@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Reader</title>
+    <style>
+      body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7c15e;
+  animation: changeBackground 10s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-color: #f7c15e;
+  }
+  50% {
+    background-color: #2ecc71;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#video {
+  width: 80%;
+  max-width: 500px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video id="video"></video>
+    </div>
+    <script>
+      const video = document.getElementById("video");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+    });
+}
+
+    </script>
+  </body>
+</html>
