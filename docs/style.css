@@ -1,55 +1,74 @@
-/* Definimos el estilo de la página */
-
-/* Establecemos el tamaño de fuente predeterminado y la familia de fuente */
+/* Font family */
 body {
-font-size: 16px;
-font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Establecemos un color de fondo para el cuerpo de la página */
+/* Background gradient */
 body {
-background-color: #f2f2f2;
+  background: linear-gradient(to bottom right, #007bff, #ee22aa);
 }
 
-/* Establecemos los estilos para el contenedor principal */
-.container {
-max-width: 800px;
-margin: 0 auto;
-padding: 40px;
-background-color: #fff;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-/* Establecemos los estilos para los encabezados */
+/* Main heading */
 h1 {
-font-size: 32px;
-margin-bottom: 20px;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  margin: 2rem 0;
 }
 
-h2 {
-font-size: 24px;
-margin-bottom: 10px;
+/* Article container */
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
-/* Establecemos los estilos para los párrafos */
-p {
-margin-bottom: 20px;
-line-height: 1.5;
+/* Article image */
+.article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
-/* Establecemos los estilos para los enlaces */
+/* Article text */
+.article p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+/* Links */
 a {
-color: #337ab7;
-text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-text-decoration: underline;
+  color: #ee22aa;
 }
 
-/* Establecemos los estilos para la sección de enlaces */
-.links {
-margin-top: 40px;
-display: flex;
-justify-content: space-between;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ee22aa;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #007bff;
 }
