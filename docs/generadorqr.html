@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Generador QR con Javascript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffa500, #b84d28);
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .qr-code-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 200px;
+            background-color: #fff;
+        }
+
+        #download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #ffa500;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="qr-code-container">
+            <div id="qrcode"></div>
+            <button id="download-button">Descargar QR</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function generateQRCode(text) {
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: text,
+                width: 300,
+                height: 300,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+
+            // Agregar evento click al botón para descargar la imagen
+            var button = document.getElementById("download-button");
+            button.addEventListener("click", function() {
+                var canvas = document.getElementById("qrcode").querySelector("canvas");
+                var dataURL = canvas.toDataURL("image/png");
+                var link = document.createElement("a");
+                link.href = dataURL;
+                link.download = "qr.png";
+                link.click();
+            });
+        }
+
+        var text = prompt("Ingrese el texto a codificar:");
+
+        if (text !== null && text !== "") {
+            generateQRCode(text);
+        }
+
+        var colors = ["#ffa500", "#b84d28", "#8B4513", "#A0522D", "#CD853F", "#D2691E", "#DEB887", "#F4A460"];
+        var body = document.querySelector("body");
+
+        setInterval(function() {
+            var randomIndex = Math.floor(Math.random() * colors.length);
+            body.style.background = "linear-gradient(to right, " + colors[randomIndex] + ", " + colors[(randomIndex + 1) % colors.length] + ")";
+        }, 3000);
+    </script>
+</body>
+</html>
